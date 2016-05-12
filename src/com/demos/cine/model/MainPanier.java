@@ -5,13 +5,24 @@ public class MainPanier {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Article a1 = new Article("AR1", "Nounours", 10, 30);
-		Article a2 = new Article("AR2", "PC", 1000, 15);
-		
 		Panier p = new Panier();
-		p.ajouter(a1, 3);
-		p.ajouter(a2, 1);
 		
+		try{
+			
+		Article a1 = new Article("AR1", "Nounours", new Prix(10), 30);
+		p.ajouter(a1, 3);
+		}
+		catch (Exception e){
+			System.out.println("Article non créé par prix incorrect");
+		}
+		try{
+		Article a2 = new Article("AR2", "PC", new Prix(600), 15);
+		p.ajouter(a2, 1);
+		}
+		catch (Exception e){
+			System.out.println("Article non créé par prix incorrect");
+		}
+
 		System.out.println(p);
 		System.out.println(p.getPrixTotalHT());
 
