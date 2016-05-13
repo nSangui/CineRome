@@ -7,9 +7,11 @@ public class Article {
 	private double prixHT;
 	private int qteStock;
 
+
 	private String type;
 
 	private boolean dematerialise;
+
 
 	
 	public Article(String reference, String designation, double prixHT, int qteStock) {
@@ -19,6 +21,7 @@ public class Article {
 		this.prixHT = prixHT;
 		this.qteStock = qteStock;
 		this.dematerialise=false;
+
 	}
 	
 	
@@ -49,6 +52,24 @@ public class Article {
 		return dematerialise;
 	}
 
+=======
+	}
+
+// objet dématérialisé
+	public Article(String reference, String designation, double prixHT) {
+	
+		this.reference = reference;
+		this.designation = designation;
+		this.prixHT = prixHT;
+		this.qteStock = 0;
+		this.dematerialise = true;
+	}
+
+	public boolean isDematerialise() {
+		return dematerialise;
+	}
+
+>>>>>>> ModifDiversesARticle
 
 
 	public void setDematerialise(boolean dematerialise) {
