@@ -52,24 +52,9 @@ public class Article {
 		return dematerialise;
 	}
 
-=======
-	}
 
-// objet dématérialisé
-	public Article(String reference, String designation, double prixHT) {
 	
-		this.reference = reference;
-		this.designation = designation;
-		this.prixHT = prixHT;
-		this.qteStock = 0;
-		this.dematerialise = true;
-	}
 
-	public boolean isDematerialise() {
-		return dematerialise;
-	}
-
->>>>>>> ModifDiversesARticle
 
 
 	public void setDematerialise(boolean dematerialise) {
